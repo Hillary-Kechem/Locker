@@ -54,3 +54,32 @@ def delete_account(accountName):
     Function that deletes an account
     '''
     return Credentials.delete_account(accountName)
+
+def main():
+    print("Hello! Welcome to Locker, your ultimate security.")
+    print('\n')
+
+    while True:
+        print('What would you like to do today?')
+        print('use this short codes: su - signup, li - login in')
+        start= input()
+        if start =='su':
+            print('Please enter your first name')
+            first_name= input()
+            print('please enter last name')
+
+            print('Please enter your username')
+            username = input()
+            print('Enter password')
+            password = input()
+            print('Please confirm password')
+            password = input()
+            print('Signed up succesfully')
+        elif start == 'li':
+            print('Please enter your profile username')
+            username = input()
+            print('Enter Password')
+            password = input()
+            print('You are now logged in')
+        else:
+            print('I dont understand you, please use code above')
