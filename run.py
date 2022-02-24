@@ -33,7 +33,15 @@ def save_account(account):
 
 def find_account(accountUsername):
     '''
-    Function that find an account by username and return the account
+    Function that find an account by username
     '''
     return Credentials.find_by_accountUsername(accountUsername)
+
+def check_existing_account(accountUsername):
+    '''
+    Function to check all the saved account
+    '''
+    return Credentials.account_exist(accountUsername)
+
+
 
