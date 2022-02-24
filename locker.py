@@ -26,6 +26,26 @@ class User:
         '''
         test to delete user
         '''
+# class user this is an instance of the credentials class
+class Credentials:
+    '''
+    this enerates instances of new accounts
+    '''
+    credentials_list=[]
 
+    def __init__(self,accountName, accountUsername, accountPassword):
+        '''
+        this function defines account objects
+
+        Args: 
+            accountName: 'twiiter'
+            accountUsername: 'beliot'
+            accountPassword: 'password'
+        '''
+
+        self.accountName:accountName
+        self.accountUsername:accountUsername
+        self.accountPassword:accountPassword
+        
 
 
