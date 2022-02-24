@@ -20,4 +20,7 @@ class TestCredentials(unittest.TestCase):
     def setUp(self):
         '''runs before each test case'''
         self.new_credentials = Credentials('twiiter','beliot','password')
-        
+
+    def test_save_account(self):
+        '''see if it saves account'''
+        self.
