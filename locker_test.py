@@ -13,3 +13,11 @@ class TestUser(unittest.TestCase):
         '''object initiated properly'''
         self.assertEqual(self.new_user.username, 'Kechem')
         self.assertEqual(self.new_user.password, 'password')
+
+
+class TestCredentials(unittest.TestCase):
+    '''Test class for testing creditials'''
+    def setUp(self):
+        '''runs before each test case'''
+        self.new_credentials = Credentials('twiiter','beliot','password')
+        
