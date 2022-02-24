@@ -51,5 +51,10 @@ class Credentials:
         '''
         saves details of account
         '''
-        Credentials.credentials_list.append(self)
+        Credentials.credentials_list.append(self) 
+
+    def delete_account(self):
+        '''
+        this deletes details of account
+        '''
 
