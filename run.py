@@ -45,10 +45,12 @@ def check_existing_account(accountUsername):
 
 def display_accounts():
     '''
-    Function that returns all saved accounts
+    Function to display all saved accounts
     '''
     return Credentials.display_accounts()
 
-
-
-
+def delete_account(accountName):
+    '''
+    Function that deletes an account
+    '''
+    return Credentials.delete_account(accountName)
