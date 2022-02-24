@@ -77,7 +77,12 @@ class Credentials:
             if account.accountUsername == accountUsername:
                 return True
             return False
-            
+    @classmethod
+    def display_account(cls):
+        '''
+        credential list display'''
+        return cls.credentials_list
+
 
 
 
