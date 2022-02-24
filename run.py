@@ -19,7 +19,7 @@ def save_user(user):
 
 
 def create_account(accountName,accountUsername, accountPassword):
-    '''function to save account
+    '''function to create new account
     '''
     new_account=Credentials(accountName,accountUsername, accountPassword)
     return new_account
@@ -29,4 +29,11 @@ def save_account(account):
     function to save account
     '''
     account.save_account
+
+
+def find_account(accountUsername):
+    '''
+    Function that find an account by username and return the account
+    '''
+    return Credentials.find_by_accountUsername(accountUsername)
 
