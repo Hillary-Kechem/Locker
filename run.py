@@ -24,3 +24,9 @@ def create_account(accountName,accountUsername, accountPassword):
     new_account=Credentials(accountName,accountUsername, accountPassword)
     return new_account
 
+def save_account(account):
+    '''
+    function to save account
+    '''
+    account.save_account
+
