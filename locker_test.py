@@ -53,5 +53,14 @@ class TestCredentials(unittest.TestCase):
         find_account= Credentials.find_accountUsername('beliot')
         self.assertEqual(find_account.accountUsername,test_account.accountUsername)
 
+    def test_account_exists(self):
+        '''Test account to see if account exists'''
+        self.new_account.save_account()
+        test_account = Credentials('twiiter','beliot','pass')
+        test_account.save_account()
+
+        account_exists = Credentials.account_exists('beliot')
+        self.assertTrue(account_exists)
+
 
 
