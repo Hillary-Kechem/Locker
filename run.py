@@ -15,6 +15,12 @@ def save_user(user):
     '''
     user.save_user()
 
-    #########
+    #######
 
+
+def create_account(accountName,accountUsername, accountPassword):
+    '''function to save account
+    '''
+    new_account=Credentials(accountName,accountUsername, accountPassword)
+    return new_account
 
