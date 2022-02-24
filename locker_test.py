@@ -19,7 +19,7 @@ class TestCredentials(unittest.TestCase):
     '''Test class for testing creditials'''
     def setUp(self):
         '''runs before each test case'''
-        self.new_credentials = Credentials('twiiter','beliot','password')
+        self.new_credentials = Credentials('twiiter','beliot','pass')
 
     def test_save_account(self):
         '''see if it saves account'''
@@ -29,5 +29,12 @@ class TestCredentials(unittest.TestCase):
     def tearDown(self):
         '''cleans up code'''
         Credentials.credentials_list=[]
-        
+
+    def test_save_multiple_account(self):
+        '''see if it saves multiple accounts'''
+        self.new_account.save_account()
+        test_account = Credentials('twiiter','beliot','pass')
+        test_account.save_account()
+        self.assertEqual(len(Credentials.credentials_list),2)
+
 
