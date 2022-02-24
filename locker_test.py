@@ -25,4 +25,9 @@ class TestCredentials(unittest.TestCase):
         '''see if it saves account'''
         self.new_account.save_account()
         self.assertEqual(len(Credentials.credentials_list),1)
+
+    def tearDown(self):
+        '''cleans up code'''
+        Credentials.credentials_list=[]
         
+
