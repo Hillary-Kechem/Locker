@@ -23,4 +23,6 @@ class TestCredentials(unittest.TestCase):
 
     def test_save_account(self):
         '''see if it saves account'''
-        self.
+        self.new_account.save_account()
+        self.assertEqual(len(Credentials.credentials_list),1)
+        
