@@ -43,5 +43,12 @@ def check_existing_account(accountUsername):
     '''
     return Credentials.account_exist(accountUsername)
 
+def display_accounts():
+    '''
+    Function that returns all saved accounts
+    '''
+    return Credentials.display_accounts()
+
+
 
 
