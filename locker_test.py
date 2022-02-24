@@ -36,5 +36,22 @@ class TestCredentials(unittest.TestCase):
         test_account = Credentials('twiiter','beliot','pass')
         test_account.save_account()
         self.assertEqual(len(Credentials.credentials_list),2)
+    
+    def test_delete_account(self):
+        '''see if it deletes accounts'''
+        self.new_account.save_account()
+        test_account = Credentials('twiiter','beliot','pass')
+        test_account.save_account()
+        self.new_account.delete_account()
+        self.assertEqual(len(Credentials.credentials_list,1))
+
+    def test_find_account_by_username(self):
+        '''Test to find a account by username'''
+        self.new_account.save_account()
+        test_account = Credentials('twiiter','beliot','pass')
+        test_account.save_account()
+        find_account= Credentials.find_accountUsername('beliot')
+        self.assertEqual(find_account.accountUsername,test_account.accountUsername)
+
 
 
