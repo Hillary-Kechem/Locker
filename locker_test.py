@@ -62,5 +62,9 @@ class TestCredentials(unittest.TestCase):
         account_exists = Credentials.account_exists('beliot')
         self.assertTrue(account_exists)
 
+    def test_display_all_accounts(self):
+        '''Test to display all accounts'''
+        self.assertEqual(Credentials.display_account(),Credentials.credentials_list)
+
 
 
