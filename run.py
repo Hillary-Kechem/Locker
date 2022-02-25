@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3.8
 from locker import Credentials
 from locker import User
 
@@ -83,3 +83,28 @@ def main():
             print('You are now logged in')
         else:
             print('I dont understand you, please use code above')
+
+        while True:
+            print(f'Hello {username}. What would you like to do?')
+            print("Use these short codes: ca - create a new account, da - display your saved accounts, fa - find an account, dlt - delete  account ex - exit the account ")
+            
+            short_code = input().lower()
+
+            if short_code == 'ca':
+                    print('New account')
+                    print('-'*10)
+
+                    print("Do you want to create an account?")
+                    accountName = input()
+
+                    print('Enter your username ...')
+                    accountUsername = input()
+
+                    print('Enter your Password ...')
+                    accountPassword = input()
+
+                    save_account(create_account(accountName, accountUsername, accountPassword))
+
+                    print('\n')
+                    print(f"New {accountName} account  with username {accountUsername} has been created successfully")
+                    print('\n')
