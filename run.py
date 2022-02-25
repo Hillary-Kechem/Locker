@@ -148,6 +148,5 @@ def main():
             
             elif short_code == 'ex':
                 print('Thank you and goodbye!!')
-                break
-            else:
-                print('I really didnt get that. Please use the short codes')
+if __name__ == '__main__':
+    main()
