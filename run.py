@@ -108,3 +108,30 @@ def main():
                     print('\n')
                     print(f"New {accountName} account  with username {accountUsername} has been created successfully")
                     print('\n')
+
+            elif short_code == 'da':
+
+                    if display_accounts():
+                        print("Below is a display of your accounts")
+                        print('\n')
+
+                        for account in display_accounts():
+                            print(f"{account.accountName} {account.accountUsername}")
+                            print('\n')
+                    else:
+                        print('\n')
+                        print("We cant find your account")
+                        print('\n')
+                        
+            elif short_code == 'fa':
+                    print('Please search for your account')
+                    search_accountUsername = input()
+                    if check_existing_account(search_accountUsername):
+                        search_account = find_account(search_accountUsername)
+                        print(f"{search_account.accountName} {search_account.accountUsername} {search_account.accountPassword}")
+                        print('-'*20)
+
+                        print(f"Account name: {search_account.accountName}")
+                        print(f"Account username: {search_account.accountUsername}")
+                    else:
+                        print("Ooop,we cant find your account")
