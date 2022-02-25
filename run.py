@@ -135,3 +135,19 @@ def main():
                         print(f"Account username: {search_account.accountUsername}")
                     else:
                         print("Ooop,we cant find your account")
+
+            elif short_code == 'dlt':
+                print('Please enter the account you want to delete')
+                accountUsername = input()
+                if find_account(accountUsername):
+                    delete_account(find_account(accountUsername))
+                    print(f'{accountUsername} has been deleted successfully')
+                else:
+                    print('The account does not exist')
+
+            
+            elif short_code == 'ex':
+                print('Thank you and goodbye!!')
+                break
+            else:
+                print('I really didnt get that. Please use the short codes')
